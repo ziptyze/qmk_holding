@@ -37,3 +37,17 @@
     { k20, k21, k22, k23, k24, k25, k26, k27, k28, k29, k2a, k2b }, \
     { k30, k31, k32, k33, k34, k35, k36, k37, k38, k39, k3a, k3b }  \
 }
+
+enum layer_names {
+    _ONE = 0,
+    _TWO,
+    _THREE,
+    _FOUR
+};
+
+#ifdef OLED_ENABLE
+void user_oled_magic(void);
+void render_logo(void);
+void clear_screen(void);
+void init_timer(void);
+#endif
