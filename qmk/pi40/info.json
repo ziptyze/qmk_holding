@@ -1,4 +1,11 @@
 {
+    "keyboard_name": "pi40",
+    "manufacturer": "1upkeyboards",
+    "usb": {
+        "vid": "0x6F75",
+        "pid": "0x5600",
+        "device_version": "0.0.1"
+    },
     "layouts": {
         "LAYOUT_ortho_4x12": {
             "layout": [

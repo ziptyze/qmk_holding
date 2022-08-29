@@ -46,7 +46,9 @@ enum layer_names {
     _FIVE,
     _SIX,
     _SEVEN,
-    _EIGHT
+    _EIGHT,
+    _NINE,
+    _TEN
 };
 
 #ifdef OLED_ENABLE

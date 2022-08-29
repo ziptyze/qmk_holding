@@ -114,6 +114,12 @@ void user_oled_magic(void) {
         case _EIGHT:
             oled_write_P(PSTR("Eight\n"), false);
             break;
+        case _NINE:
+            oled_write_P(PSTR("Nine\n"), false);
+            break;
+        case _TEN:
+            oled_write_P(PSTR("Ten\n"), false);
+            break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
             oled_write_ln_P(PSTR("Undefined"), false);

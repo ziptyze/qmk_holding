@@ -5,9 +5,7 @@
 
 #include "config_common.h"
 
-#pragma once
-
-#define DYNAMIC_KEYMAP_LAYER_COUNT 8
+#define DYNAMIC_KEYMAP_LAYER_COUNT 10
 
 #ifdef OLED_ENABLE
 #    define OLED_DISPLAY_128X32
@@ -17,13 +15,6 @@
 #define OLED_BRIGHTNESS 128
 #define OLED_FONT_H "keyboards/1upkeyboards/pi40/lib/glcdfont.c"
 #endif
-
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x6F75 // OU
-#define PRODUCT_ID   0x5600
-#define DEVICE_VER   0x0001
-#define MANUFACTURER 1upkeyboards
-#define PRODUCT      pi40
 
 /* key matrix size */
 #define MATRIX_ROWS 4
