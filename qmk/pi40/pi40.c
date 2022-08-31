@@ -132,7 +132,7 @@ void user_oled_magic(void) {
     oled_write_P(led_state.scroll_lock ? PSTR("Scrl(x)") : PSTR("Scrl( )"), false);
 
 
-    switch (rgblight_get_mode()) {
+    switch (rgb_matrix_get_mode()) {
         case 1:
             oled_write_P(PSTR("Solid Color\n                  "), false);
             break;
@@ -287,7 +287,7 @@ void clear_screen(void) {
     }
 }
 
-oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+oled_rotation_t oled_init_kb(oled_rotation_t rotation) {
     return OLED_ROTATION_180;
 }
 
