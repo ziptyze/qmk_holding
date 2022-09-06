@@ -1,5 +1,18 @@
-// Copyright 2022 ziptyze (@ziptyze)
-// SPDX-License-Identifier: GPL-2.0-or-later
+/* Copyright 2022 ziptyze
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 
 #pragma once
 
@@ -7,13 +20,24 @@
 
 #define DYNAMIC_KEYMAP_LAYER_COUNT 10
 
+#define MATRIX_ROWS 4
+#define MATRIX_COLS 4
+
+#define DIODE_DIRECTION COL2ROW
+
+#define MATRIX_ROW_PINS { GP2,  GP9, GP8,  GP7 }
+#define MATRIX_COL_PINS { GP26, GP1, GP18, GP5 }
+
+#define ENCODERS_PAD_A { GP27, GP4 }
+#define ENCODERS_PAD_B { GP28, GP3 }
+
 #define NOP_FUDGE 0.4
 
-#define RGB_DI_PIN GP15
-#define DRIVER_LED_TOTAL 16
-#define RGBLED_NUM 16
-#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
+#define RGB_DI_PIN GP6
+#define DRIVER_LED_TOTAL 20
+#define RGBLED_NUM 20
 #define RGB_MATRIX_KEYPRESSES
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -63,7 +87,6 @@
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

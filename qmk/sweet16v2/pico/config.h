@@ -18,33 +18,13 @@
 
 #include "config_common.h"
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID    0x6F75 // OU
-#define PRODUCT_ID   0x5518
-#define DEVICE_VER   0x0001
-#define MANUFACTURER 1upkeyboards
-#define PRODUCT      sweet16v3
-
-/* key matrix size */
-#define MATRIX_ROWS 4
-#define MATRIX_COLS 4
-
-#define MATRIX_ROW_PINS { D1, B5, B4, E6 }
-#define MATRIX_COL_PINS { F7, D2, B1, C6 }
-
-#define ENCODERS_PAD_A { F6, D4 }
-#define ENCODERS_PAD_B { F5, D0 }
-
-#define DIODE_DIRECTION COL2ROW
+#define DYNAMIC_KEYMAP_LAYER_COUNT 10
 
 #define RGB_DI_PIN D7
 #define DRIVER_LED_TOTAL 20
-#define RGB_MATRIX_KEYPRESSES // reacts to keypresses
+#define RGB_MATRIX_KEYPRESSES
 #define RGB_MATRIX_FRAMEBUFFER_EFFECTS
-#define RGBLIGHT_LIMIT_VAL 255
-#ifdef RGB_MATRIX_ENABLE
-#    define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 255
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
 // https://docs.qmk.fm/#/feature_rgb_matrix?id=rgb-matrix-effects
@@ -93,10 +73,6 @@
 #    define ENABLE_RGB_MATRIX_MULTISPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #    define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
-#endif
-
-/* Debounce reduces chatter (unintended double-presses) - set 0 if debouncing is not needed */
-#define DEBOUNCE 5
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

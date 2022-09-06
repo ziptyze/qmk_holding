@@ -17,41 +17,25 @@
 #include QMK_KEYBOARD_H
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT_ortho_4x4( /* Base */
+  [0] = LAYOUT_ortho_4x4(
     KC_P7,    KC_P8,    KC_P9,    KC_PMNS,
     KC_P4,    KC_P5,    KC_P6,    KC_PPLS,
     KC_P1,    KC_P2,    KC_P3,    KC_PSLS,
     MO(1),    KC_P0,    KC_PDOT,  KC_PENT
   ),
 
-  [1] = LAYOUT_ortho_4x4( /* Fn Layer */
-    RGB_TOG,   RGB_HUI,    RGB_SAI,    RGB_VAI,
-    RGB_MOD,   RGB_HUD,    RGB_SAD,    RGB_VAD,
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    RESET
-  ),
-
-  [2] = LAYOUT_ortho_4x4( 
+  [1] = LAYOUT_ortho_4x4(
     KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
     KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
     KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
     KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS
-  ),
-
-  [3] = LAYOUT_ortho_4x4( 
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS,
-    KC_TRNS,   KC_TRNS,    KC_TRNS,    KC_TRNS
-  ),
+  )
 };
 
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-    [0] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),      ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
-    [1] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS),      ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
-    [2] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS),      ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
-    [3] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS),      ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
+    [0] =  { ENCODER_CCW_CW(KC_VOLD, KC_VOLU),      ENCODER_CCW_CW(RGB_VAD, RGB_VAI)  },
+    [1] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS),      ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  }
 };
 #endif
